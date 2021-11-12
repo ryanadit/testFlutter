@@ -277,13 +277,6 @@ class _CreateRolePageState extends State<CreateRolePage> {
                 controller: textEditingController,
                 cursorColor: Colors.blueAccent,
                 validator: (val) {
-                  /*if(val!.isEmpty) {
-                    return "$title is Empty";
-                  }
-                  else if(flagType == _flagTitle && !val.contains(Helper.regexEmail)) {
-                    return "$title wrong format";
-                  }
-                  return null;*/
                   return _saveRoleNotifier?.validator(val, title);
                 },
                 keyboardType: _keyboardType,
